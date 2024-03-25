@@ -26,11 +26,20 @@ export const ShapeController = () => {
   };
 
   return (
-    <Stack
+    <Box
       sx={{
-        mt: 30
+        mt: 20
       }}
     >
+      <Typography
+        component="h2"
+        variant="h3"
+        sx={{
+          textAlign: "center",
+        }}
+      >
+        APIを使った画像のラベル検出
+      </Typography>
       <Box
         sx={{
           width: 200,
@@ -97,6 +106,6 @@ export const ShapeController = () => {
           />
         </Stack>
       </Box>
-    </Stack>
+    </Box>
   );
 }
