@@ -53,7 +53,7 @@ export const ShapeController = () => {
       >
         <Stack>
           <Typography>
-            X: { state.x }
+            X: { state.x }px
           </Typography>
           <Slider
             min={-100}
@@ -64,7 +64,7 @@ export const ShapeController = () => {
         </Stack>
         <Stack>
           <Typography>
-            Y: { state.y }
+            Y: { state.y }px
           </Typography>
           <Slider
             min={-100}
@@ -91,7 +91,7 @@ export const ShapeController = () => {
           <Slider
             min={0}
             max={2}
-            step={0.1}
+            step={0.01}
             value={state.scale}
             onChange={handleChange("scale")}
           />
