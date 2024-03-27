@@ -14,12 +14,14 @@ import CloudUploadIcon from "@mui/icons-material/CloudUpload";
 
 const API_KEY = import.meta.env.VITE_GOOGLE_CLOUD_VISION_API_KEY
 
+// google cloud visionを使用した画像のラベル解析
 export const GoogleCloudVision = () => {
   const [image, setImage] = useState();
   const [imageUrl, setImageUrl] = useState();
   const [labels, setLabels] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
+  // response用の画像の変換
   const toBase64 = (file) => new Promise((resolve, reject) => {
     const reader = new FileReader();
     reader.readAsDataURL(file);
@@ -27,6 +29,7 @@ export const GoogleCloudVision = () => {
     reader.onerror = error => reject(error);
   });
 
+  // ドラッグ&ドロップで画像のセット
   const handleDrop = useCallback((e) => {
     e.preventDefault();
     const file = e.dataTransfer.files[0];
@@ -36,10 +39,12 @@ export const GoogleCloudVision = () => {
     }
   }, []);
 
+  // デフォルトの挙動の制限
   const handleDragOver = useCallback((e) => {
     e.preventDefault();
   }, []);
 
+  // 画像のラベル解析
   useEffect(() => {
     (async () => {
       if (!image) return;

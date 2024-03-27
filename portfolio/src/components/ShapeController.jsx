@@ -6,6 +6,7 @@ import {
   Typography
 } from "@mui/material";
 
+// 物体の動作制御
 export const ShapeController = () => {
   const [state, setState] = useState(
     {
@@ -16,6 +17,7 @@ export const ShapeController = () => {
     }
   );
 
+  // スタイルの制御
   const handleChange = (type) => (e, value) => {
     setState(prev => (
       {
@@ -38,7 +40,7 @@ export const ShapeController = () => {
           textAlign: "center",
         }}
       >
-        APIを使った画像のラベル検出
+        スタイル変更
       </Typography>
       <Box
         sx={{

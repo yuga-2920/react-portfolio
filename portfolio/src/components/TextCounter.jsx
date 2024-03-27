@@ -5,6 +5,7 @@ import {
   TextField
 } from "@mui/material";
 
+// 文字数のカウント
 export const TextCounter = () => {
   const [text, setText] = useState('')
 
