@@ -5,6 +5,7 @@ import { TextCounter } from "./components/TextCounter";
 import { ShapeController } from "./components/ShapeController";
 import { GoogleCloudVision } from "./components/GoogleCloudVision";
 import { ScrollEffect } from "./components/ScrollEffect";
+import { MouseImage } from "./components/MouseImage";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <ShapeController />
       <GoogleCloudVision />
       <ScrollEffect />
+      <MouseImage />
     </ThemeContextProvider>
   )
 }
